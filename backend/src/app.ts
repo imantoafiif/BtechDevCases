@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import helmet from "helmet";
 import { errorHandler, notFoundHandler } from "./middleware/error-handler";
 import type { Config } from "./config/env";
@@ -31,6 +32,13 @@ export function createApp({ config, db, clock = Date.now }: AppDeps) {
   const app = express();
   app.disable("x-powered-by");
   app.use(helmet());
+  app.use(
+    cors({
+      origin: config.corsOrigins,
+      methods: ["GET", "POST"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+    }),
+  );
   app.use(express.json({ limit: "10kb" }));
 
   app.use("/api/auth", createAuthRouter(auth, tokens, config));

@@ -1,7 +1,6 @@
 import { Navigate, Outlet } from "react-router";
 import { useAuth } from "./AuthProvider";
 
-/** Only for logged-in users; everyone else goes to /login (with the logout reason, if any). */
 export function ProtectedRoute() {
   const { session, logoutReason } = useAuth();
   if (session) return <Outlet />;

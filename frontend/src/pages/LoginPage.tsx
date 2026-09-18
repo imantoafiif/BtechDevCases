@@ -9,7 +9,7 @@ import { Link, useSearchParams } from "react-router";
 import { applyApiError } from "../api/form-errors";
 import { ApiError } from "../api/http";
 import { useAuth } from "../auth/AuthProvider";
-import { FormField } from "../../components/FormField";
+import { FormField } from "../components/FormField";
 
 const NOTICES: Record<string, string> = {
   registered: "Account created. Please log in.",

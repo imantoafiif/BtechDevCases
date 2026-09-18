@@ -1,0 +1,122 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f4f5f7;
+  color: #1b1f24;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+}
+
+.card h1 {
+  margin: 0 0 24px;
+  font-size: 22px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #cdd2d8;
+  border-radius: 6px;
+  font: inherit;
+  color: inherit;
+  background: #ffffff;
+}
+
+.field input:focus-visible {
+  outline: 2px solid #2f6feb;
+  outline-offset: 1px;
+  border-color: #2f6feb;
+}
+
+.field input[aria-invalid="true"] {
+  border-color: #c1392d;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2f6feb;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #2559c4;
+}
+
+button:disabled {
+  background: #9bb4e6;
+  cursor: not-allowed;
+}
+
+.field-error,
+.form-error {
+  margin: 0;
+  color: #c1392d;
+  font-size: 14px;
+}
+
+.notice {
+  margin: 0 0 20px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #eaf1fd;
+  color: #1f4694;
+  font-size: 14px;
+}
+
+.hint {
+  margin: 0 0 20px;
+  color: #6a737d;
+  font-size: 14px;
+}
+
+.switch {
+  margin: 20px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+a {
+  color: #2f6feb;
+}

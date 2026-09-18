@@ -5,5 +5,5 @@
     "types": ["vite/client"],
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/api", "components", "src/pages"]
+  "include": ["src", "src/api", "src/components", "src/pages"]
 }
