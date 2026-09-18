@@ -33,7 +33,6 @@ export function createAuthService({
   jwt,
   clock = Date.now,
 }: AuthServiceDeps) {
-  // Compared against when the email is unknown, so login takes the same time either way.
   let dummyHash: Promise<string> | undefined;
   const getDummyHash = () =>
     (dummyHash ??= hasher.hash("timing-equalization-placeholder"));
