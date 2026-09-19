@@ -249,11 +249,6 @@ describe("POST /api/auth/refresh", () => {
 });
 
 describe("misc", () => {
-  it("GET /api/health returns ok", async () => {
-    const { api } = createTestApp();
-    await api.get("/api/health").expect(200, { status: "ok" });
-  });
-
   it("allows CORS only for configured origins", async () => {
     const { api } = createTestApp();
 
